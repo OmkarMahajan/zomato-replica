@@ -1,3 +1,406 @@
 @use './reset.scss';
 
-/* Add your css here */
+
+/* Workspace for variable*/
+$navbar_color: black;
+$nav_bar_height_max:38px;
+$nav_bar_height_mid:28px;
+$link_text_color:white;
+$link_padding:-42px;
+/*end of variable workspace*/
+
+/* Common styling is added here */
+@mixin create-flex{
+    display: flex;
+    flex-direction: row;
+}
+@mixin create-column-flex{
+    display: flex;
+    flex-direction: column;
+} 
+
+@mixin header-text-style {
+    color: $navbar_color;
+    font-weight: bolder;
+}
+
+@mixin remove_hover_effect{
+    &:hover{
+        text-decoration: none;
+    }
+}
+/*mixin end*/
+
+@media screen and (min-width:839px)
+{
+    body{
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+        //header conatainer style
+        .h-container{
+            font-weight: 50;
+            font-size: small;
+            margin: 0px 8.333%;    
+            padding: 0px 20px;    
+            @include create-column-flex;
+            .navbar{
+                font-size: large;
+                padding: 0px;
+                @include create-flex;
+                justify-content: space-between;
+                align-items: center;
+                .link-with-text{
+                    align-items: center;
+                    &:hover{
+                        text-decoration: none;
+                    }
+                }
+                .link-text-wrpper{
+                        align-items: center;
+                        padding: 0px 10px;    
+                        img{
+                            height: $nav_bar_height_max;
+                        }
+                        span{
+                            @include header-text-style;
+                            height: $nav_bar_height_max;
+                        }
+                }
+                //zomato services style
+                ul#zomato-services{
+                    list-style: none;
+                    @include create-flex;
+                    margin:0px;
+                    padding: 0px;  
+                    align-items: baseline;  
+                    li{
+                        align-items: center;
+                        margin: 0px;
+                        padding: 0px 10px;
+                        img{
+                            height: $nav_bar_height_max;
+                        }
+                        a{
+                            @include header-text-style;
+                            @include remove_hover_effect;
+                            height: $nav_bar_height_max;
+                        }
+                        .nav_item_3_img{
+                            height: 32px;   
+                        }
+                    }
+                }
+            }
+
+            //Link styling
+            .navbar-row-2{
+                text-align: end;
+                cursor: pointer;    
+                height: 38px;
+                margin-bottom: $link_padding; 
+                padding: 10px 20px 12px 20px;
+                font-size: 15px;
+                padding: 20px 0px; 
+                .login{
+                    @include remove_hover_effect;
+                    color: $link_text_color;
+                    margin-right: 10px;
+                    padding: 10px 20px 12px 20px;
+                }
+                .create_account{
+                    @include remove_hover_effect;
+                    color:$link_text_color;
+                    border: 2px solid white;
+                    margin: 0 0 0 0.3em;
+                    padding: 10px 20px 12px 20px;
+                }
+            }
+        }
+        .bg_image{
+            background-image: linear-gradient(
+                rgba(0, 0, 0, 0.3),
+                rgba(0, 0, 0, 0.3)
+              ),url(../images/bg.jpg); 
+
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            height: 70vh;                     //newly Added
+            padding: 0px;
+            width: 100%;
+            //position: relative;
+            text-align: center ;  
+            .banner{
+                //height: 70vh; 
+                position: absolute;             //newly Added
+                top: 30%;
+                left: 30%;        
+                margin: 0px auto;           
+                .banner-group{
+                    img{
+                        width: 250px;
+                        height:100px;
+                        margin: 20px 0px;
+                    }
+                    .banner-text{
+                        color: white;
+                        margin: 20px 0px;
+                        font-weight: 300;
+                        font-size: x-large;
+                    }
+                    
+                    .horizontal-banner{                          //new
+                        @include create-flex;
+                        width: 100%;
+                        .dropdown{
+                            .btn-secondary{
+                                background-color: white;
+                                color: black;
+                                padding: 5px;
+                                width: 150px;
+                                //text-align: left;
+                                //justify-content: end;
+                            }
+                            .dropdown-toggle{
+                                
+                            }
+                        }
+
+                        .search-restaurant{                               //new
+                            @include create-flex;
+                            #search-res{
+                                height: 36px;
+                                width:450px;
+                                margin: 0px 5px;
+                            }
+                            .search-btn{
+                                width: 100px;
+                                padding: 5px;
+                                margin: 0px 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }   
+    }
+}
+
+
+/*media query for medium devices*/
+@media screen and (max-width:838px) and (min-width: 421px)
+{
+    body{
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+    
+        //header conatainer style
+        .h-container{
+            font-weight: 100;
+            padding: 5px 20px;
+            margin: 0px 8.333%;    
+            padding: 0px 20px;    
+            @include create-column-flex;
+            .navbar{
+                font-size: large;
+                padding: 0px;
+                height: 20vh;
+                @include create-flex;
+                justify-content: space-evenly;
+                align-items: center;
+                //margin: 0px 8.33%;new
+                .link-with-text{
+                    align-items: center;
+                    &:hover{
+                        text-decoration: none;
+                    }
+                }
+                .link-text-wrpper{
+                        align-items: center;
+                        padding: 0px 10px;    
+                        img{
+                            height: $nav_bar_height_mid;
+                        }
+                        span{
+                            @include header-text-style;
+                            height: $nav_bar_height_mid;
+                        }
+                }
+                //zomato services style
+                ul#zomato-services{
+                    list-style: none;
+                    margin:0px;
+                    padding: 0px;  
+                    @include create-flex;
+                    
+                    justify-content: center;
+                    display: flow-root;
+                    align-items: baseline; 
+                    li{
+                        padding: 0px 10px;
+                        img{
+                            height: $nav_bar_height_mid;
+                        }
+                        a{
+                            @include header-text-style;
+                            @include remove_hover_effect;
+                            height: $nav_bar_height_mid;
+                        }
+                        .nav_item_3_img{
+                            height: 18px;
+                        }
+                    }
+                }
+            }
+            
+            //Link styling
+            .navbar-row-2{
+                margin: 48px 8.333%;
+                text-align: end;
+                cursor: pointer;
+                height: 38px;
+                margin-bottom:$link_padding;  
+                padding: 10px 20px 12px 20px;
+                font-size: 15px;
+                padding: 20px 0px; 
+                .login{
+                    @include remove_hover_effect;
+                    color: $link_text_color;
+                    padding: 10px 20px 12px 20px;
+                    margin-right: 10px;
+                }
+                .create_account{
+                    @include remove_hover_effect;
+                    color: $link_text_color;
+                    padding: 10px 20px 12px 20px;
+                    border: 2px solid $link_text_color;
+                    margin: 0 0 0 0.3em;
+                }
+            }
+        }
+        .bg_image{
+            background-color: linear-gradient(
+                rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.5)
+              );
+            background: url(../images/bg.jpg) no-repeat center center fixed; 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            height: 70vh;                    
+            padding: 0px;
+        }
+    }
+}
+
+@media screen and (max-width:420px)
+{
+    body{
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+    
+        //header conatainer style
+        .h-container{
+            font-weight: 100;
+            padding: 0px 20px;    
+            @include create-column-flex;
+            .navbar{
+                width: 100%;
+                font-size: large;
+                padding: 0px;
+                height: 20vh;
+                @include create-flex;
+                justify-content: center;
+                align-items: center;
+                //margin: 0px 8.33%;new
+                .link-with-text{
+                    flex-grow: 1;
+                    align-items: center;
+                    &:hover{
+                        text-decoration: none;
+                    }
+                    width: 35%;
+                }
+                .link-text-wrpper{
+                        
+                        justify-content: center;
+                        align-items: center;
+                        padding: 0px 10px;    //new
+                        img{
+                            height: $nav_bar_height_mid;
+                        }
+                        span{
+                            @include header-text-style;
+                            height: $nav_bar_height_mid;
+                        }
+                        
+                }
+                //zomato services style
+                ul#zomato-services{
+                    flex-grow: 1;
+                    list-style: none;
+                    @include create-flex;
+                    align-items: center;
+                    padding:0px;
+                    justify-content: center;
+                    display: flow-root;
+                    li{
+                        padding: 0px 10px;
+                        img{
+                            height: $nav_bar_height_mid;
+                        }
+                        a{
+                            @include header-text-style;
+                            @include remove_hover_effect;
+                            height: $nav_bar_height_mid;
+                        }
+                        .nav_item_3_img{
+                            height: 20px;
+                        }
+                    }
+                }
+            }
+            
+            //Link styling
+            .navbar-row-2{
+                margin: 20px 0.2%;
+                text-align: end;
+                cursor: pointer;
+                margin-bottom:-65px;
+                //padding: 5px;
+                height: 38px;
+                .login{
+                    @include remove_hover_effect;
+                    color: $link_text_color;
+                    padding: 10px 20px 12px 20px;
+                    margin-right: 10px;
+                }
+                .create_account{
+                    @include remove_hover_effect;
+                    color: $link_text_color;
+                    padding: 10px 20px 12px 20px;
+                    border: 2px solid $link_text_color;
+                    margin: 0 0 0 0.3em;
+                }
+            }
+        }
+        .bg_image{
+            background-color: linear-gradient(
+                rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.5)
+              );
+            background: url(../images/bg.jpg) no-repeat center center fixed; 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            height: 70vh;                      //content added
+            padding: 0px;
+        }
+    }
+}

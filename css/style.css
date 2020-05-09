@@ -1,0 +1,456 @@
+@use './reset.scss';
+/* Workspace for variable*/
+/*end of variable workspace*/
+/* Common styling is added here */
+/*mixin end*/
+@media screen and (min-width: 839px) {
+  body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+  }
+  body .h-container {
+    font-weight: 50;
+    font-size: small;
+    margin: 0px 8.333%;
+    padding: 0px 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .h-container .navbar {
+    font-size: large;
+    padding: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body .h-container .navbar .link-with-text {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body .h-container .navbar .link-with-text:hover {
+    text-decoration: none;
+  }
+  body .h-container .navbar .link-text-wrpper {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0px 10px;
+  }
+  body .h-container .navbar .link-text-wrpper img {
+    height: 38px;
+  }
+  body .h-container .navbar .link-text-wrpper span {
+    color: black;
+    font-weight: bolder;
+    height: 38px;
+  }
+  body .h-container .navbar ul#zomato-services {
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin: 0px;
+    padding: 0px;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+  body .h-container .navbar ul#zomato-services li {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0px;
+    padding: 0px 10px;
+  }
+  body .h-container .navbar ul#zomato-services li img {
+    height: 38px;
+  }
+  body .h-container .navbar ul#zomato-services li a {
+    color: black;
+    font-weight: bolder;
+    height: 38px;
+  }
+  body .h-container .navbar ul#zomato-services li a:hover {
+    text-decoration: none;
+  }
+  body .h-container .navbar ul#zomato-services li .nav_item_3_img {
+    height: 32px;
+  }
+  body .h-container .navbar-row-2 {
+    text-align: end;
+    cursor: pointer;
+    height: 38px;
+    margin-bottom: -42px;
+    padding: 10px 20px 12px 20px;
+    font-size: 15px;
+    padding: 20px 0px;
+  }
+  body .h-container .navbar-row-2 .login {
+    color: white;
+    margin-right: 10px;
+    padding: 10px 20px 12px 20px;
+  }
+  body .h-container .navbar-row-2 .login:hover {
+    text-decoration: none;
+  }
+  body .h-container .navbar-row-2 .create_account {
+    color: white;
+    border: 2px solid white;
+    margin: 0 0 0 0.3em;
+    padding: 10px 20px 12px 20px;
+  }
+  body .h-container .navbar-row-2 .create_account:hover {
+    text-decoration: none;
+  }
+  body .bg_image {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(../images/bg.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/bg.jpg);
+    background-size: cover;
+    height: 70vh;
+    padding: 0px;
+    width: 100%;
+    text-align: center;
+  }
+  body .bg_image .banner {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    margin: 0px auto;
+  }
+  body .bg_image .banner .banner-group img {
+    width: 250px;
+    height: 100px;
+    margin: 20px 0px;
+  }
+  body .bg_image .banner .banner-group .banner-text {
+    color: white;
+    margin: 20px 0px;
+    font-weight: 300;
+    font-size: x-large;
+  }
+  body .bg_image .banner .banner-group .horizontal-banner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+  }
+  body .bg_image .banner .banner-group .horizontal-banner .dropdown .btn-secondary {
+    background-color: white;
+    color: black;
+    padding: 5px;
+    width: 150px;
+  }
+  body .bg_image .banner .banner-group .horizontal-banner .search-restaurant {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  body .bg_image .banner .banner-group .horizontal-banner .search-restaurant #search-res {
+    height: 36px;
+    width: 450px;
+    margin: 0px 5px;
+  }
+  body .bg_image .banner .banner-group .horizontal-banner .search-restaurant .search-btn {
+    width: 100px;
+    padding: 5px;
+    margin: 0px 5px;
+  }
+}
+
+/*media query for medium devices*/
+@media screen and (max-width: 838px) and (min-width: 421px) {
+  body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+  }
+  body .h-container {
+    font-weight: 100;
+    padding: 5px 20px;
+    margin: 0px 8.333%;
+    padding: 0px 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .h-container .navbar {
+    font-size: large;
+    padding: 0px;
+    height: 20vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body .h-container .navbar .link-with-text {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body .h-container .navbar .link-with-text:hover {
+    text-decoration: none;
+  }
+  body .h-container .navbar .link-text-wrpper {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0px 10px;
+  }
+  body .h-container .navbar .link-text-wrpper img {
+    height: 28px;
+  }
+  body .h-container .navbar .link-text-wrpper span {
+    color: black;
+    font-weight: bolder;
+    height: 28px;
+  }
+  body .h-container .navbar ul#zomato-services {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: flow-root;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+  body .h-container .navbar ul#zomato-services li {
+    padding: 0px 10px;
+  }
+  body .h-container .navbar ul#zomato-services li img {
+    height: 28px;
+  }
+  body .h-container .navbar ul#zomato-services li a {
+    color: black;
+    font-weight: bolder;
+    height: 28px;
+  }
+  body .h-container .navbar ul#zomato-services li a:hover {
+    text-decoration: none;
+  }
+  body .h-container .navbar ul#zomato-services li .nav_item_3_img {
+    height: 18px;
+  }
+  body .h-container .navbar-row-2 {
+    margin: 48px 8.333%;
+    text-align: end;
+    cursor: pointer;
+    height: 38px;
+    margin-bottom: -42px;
+    padding: 10px 20px 12px 20px;
+    font-size: 15px;
+    padding: 20px 0px;
+  }
+  body .h-container .navbar-row-2 .login {
+    color: white;
+    padding: 10px 20px 12px 20px;
+    margin-right: 10px;
+  }
+  body .h-container .navbar-row-2 .login:hover {
+    text-decoration: none;
+  }
+  body .h-container .navbar-row-2 .create_account {
+    color: white;
+    padding: 10px 20px 12px 20px;
+    border: 2px solid white;
+    margin: 0 0 0 0.3em;
+  }
+  body .h-container .navbar-row-2 .create_account:hover {
+    text-decoration: none;
+  }
+  body .bg_image {
+    background-color: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background: url(../images/bg.jpg) no-repeat center center fixed;
+    background-size: cover;
+    height: 70vh;
+    padding: 0px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+  }
+  body .h-container {
+    font-weight: 100;
+    padding: 0px 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .h-container .navbar {
+    width: 100%;
+    font-size: large;
+    padding: 0px;
+    height: 20vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body .h-container .navbar .link-with-text {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 35%;
+  }
+  body .h-container .navbar .link-with-text:hover {
+    text-decoration: none;
+  }
+  body .h-container .navbar .link-text-wrpper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0px 10px;
+  }
+  body .h-container .navbar .link-text-wrpper img {
+    height: 28px;
+  }
+  body .h-container .navbar .link-text-wrpper span {
+    color: black;
+    font-weight: bolder;
+    height: 28px;
+  }
+  body .h-container .navbar ul#zomato-services {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: flow-root;
+  }
+  body .h-container .navbar ul#zomato-services li {
+    padding: 0px 10px;
+  }
+  body .h-container .navbar ul#zomato-services li img {
+    height: 28px;
+  }
+  body .h-container .navbar ul#zomato-services li a {
+    color: black;
+    font-weight: bolder;
+    height: 28px;
+  }
+  body .h-container .navbar ul#zomato-services li a:hover {
+    text-decoration: none;
+  }
+  body .h-container .navbar ul#zomato-services li .nav_item_3_img {
+    height: 20px;
+  }
+  body .h-container .navbar-row-2 {
+    margin: 20px 0.2%;
+    text-align: end;
+    cursor: pointer;
+    margin-bottom: -65px;
+    height: 38px;
+  }
+  body .h-container .navbar-row-2 .login {
+    color: white;
+    padding: 10px 20px 12px 20px;
+    margin-right: 10px;
+  }
+  body .h-container .navbar-row-2 .login:hover {
+    text-decoration: none;
+  }
+  body .h-container .navbar-row-2 .create_account {
+    color: white;
+    padding: 10px 20px 12px 20px;
+    border: 2px solid white;
+    margin: 0 0 0 0.3em;
+  }
+  body .h-container .navbar-row-2 .create_account:hover {
+    text-decoration: none;
+  }
+  body .bg_image {
+    background-color: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background: url(../images/bg.jpg) no-repeat center center fixed;
+    background-size: cover;
+    height: 70vh;
+    padding: 0px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
