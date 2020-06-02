@@ -124,28 +124,38 @@
     text-decoration: none;
   }
   body .bg_image {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(../images/bg.jpg);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/bg.jpg);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url(../images/bg.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/bg.jpg);
     background-size: cover;
     height: 70vh;
     padding: 0px;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     text-align: center;
   }
-  body .bg_image .banner {
-    position: absolute;
-    top: 30%;
-    left: 30%;
-    margin: 0px auto;
+  body .bg_image .banner .banner-group {
+    width: 100%;
   }
   body .bg_image .banner .banner-group img {
     width: 250px;
     height: 100px;
-    margin: 20px 0px;
+    margin: 0px 0px 8vh 0px;
   }
   body .bg_image .banner .banner-group .banner-text {
     color: white;
-    margin: 20px 0px;
+    margin: 0px 0px 7vh 0px;
     font-weight: 300;
     font-size: x-large;
   }
@@ -157,13 +167,17 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 100%;
   }
   body .bg_image .banner .banner-group .horizontal-banner .dropdown .btn-secondary {
     background-color: white;
     color: black;
     padding: 5px;
-    width: 150px;
+    width: 15vw;
+    height: 42px;
   }
   body .bg_image .banner .banner-group .horizontal-banner .search-restaurant {
     display: -webkit-box;
@@ -175,18 +189,56 @@
             flex-direction: row;
   }
   body .bg_image .banner .banner-group .horizontal-banner .search-restaurant #search-res {
-    height: 36px;
-    width: 450px;
+    height: 42px;
+    border-style: none;
+    padding: 1px;
+    width: 50vw;
+    border-radius: 4px;
     margin: 0px 5px;
   }
   body .bg_image .banner .banner-group .horizontal-banner .search-restaurant .search-btn {
+    height: 44px;
+    background-color: #e23744;
+    color: white;
+    border-radius: 4px;
+    border-style: none;
     width: 100px;
     padding: 5px;
     margin: 0px 5px;
   }
+  body .collection .card {
+    width: 25rem;
+    height: 24rem;
+  }
+  body .collection .widget .search-location {
+    position: relative;
+  }
+  body .collection .widget .search-location .search-del {
+    border-radius: 3px;
+    border: 1px solid grey;
+    height: 3.2em;
+    width: 100%;
+    padding: 8px;
+  }
+  body .collection .widget .search-location .detect-btn {
+    border-style: none;
+    border-radius: 1px;
+    position: absolute;
+    padding: 6px;
+    margin: 0.4em 0em 0em -4.4em;
+  }
+  body .collection .widget .order-btn {
+    width: 100%;
+    margin: 20px 0px;
+  }
+  body .collection .order-text {
+    color: #14ae51;
+    text-align: center;
+    width: 100%;
+  }
 }
 
-/*media query for medium devices*/
+/*media query for medium scale devices*/
 @media screen and (max-width: 838px) and (min-width: 421px) {
   body {
     margin: 0px;
@@ -310,11 +362,93 @@
     text-decoration: none;
   }
   body .bg_image {
-    background-color: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-    background: url(../images/bg.jpg) no-repeat center center fixed;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url(../images/bg.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/bg.jpg);
     background-size: cover;
     height: 70vh;
     padding: 0px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
+  body .bg_image .banner .banner-group img {
+    width: 100px;
+    height: 50px;
+    margin: 0px 0px 8vh 0px;
+  }
+  body .bg_image .banner .banner-group .banner-text {
+    color: white;
+    margin: 0px 0px 7vh 0px;
+    font-weight: 300;
+    font-size: x-large;
+  }
+  body .bg_image .banner .banner-group .horizontal-banner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-flow: column;
+        flex-flow: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+  body .bg_image .banner .banner-group .horizontal-banner .dropdown {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    width: 100%;
+  }
+  body .bg_image .banner .banner-group .horizontal-banner .dropdown .btn-secondary {
+    height: 42px;
+    background-color: white;
+    color: black;
+    padding: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  body .bg_image .banner .banner-group .horizontal-banner .search-restaurant {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-flow: column;
+        flex-flow: column;
+  }
+  body .bg_image .banner .banner-group .horizontal-banner .search-restaurant #search-res {
+    margin-bottom: 10px;
+    border-style: none;
+    height: 42px;
+    width: 100%;
+    border-radius: 4px;
+  }
+  body .bg_image .banner .banner-group .horizontal-banner .search-restaurant .search-btn {
+    background-color: #e23744;
+    color: white;
+    height: 42px;
+    border-radius: 4px;
+    border-style: none;
+    width: 100%;
+    padding: 5px;
   }
 }
 
@@ -446,11 +580,93 @@
     text-decoration: none;
   }
   body .bg_image {
-    background-color: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-    background: url(../images/bg.jpg) no-repeat center center fixed;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url(../images/bg.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/bg.jpg);
     background-size: cover;
     height: 70vh;
     padding: 0px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
+  body .bg_image .banner .banner-group img {
+    width: 100px;
+    height: 50px;
+    margin: 0px 0px 8vh 0px;
+  }
+  body .bg_image .banner .banner-group .banner-text {
+    color: white;
+    margin: 0px 0px 7vh 0px;
+    font-weight: 300;
+    font-size: x-large;
+  }
+  body .bg_image .banner .banner-group .horizontal-banner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-flow: column;
+        flex-flow: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+  body .bg_image .banner .banner-group .horizontal-banner .dropdown {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    width: 100%;
+  }
+  body .bg_image .banner .banner-group .horizontal-banner .dropdown .btn-secondary {
+    height: 42px;
+    background-color: white;
+    color: black;
+    padding: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  body .bg_image .banner .banner-group .horizontal-banner .search-restaurant {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-flow: column;
+        flex-flow: column;
+  }
+  body .bg_image .banner .banner-group .horizontal-banner .search-restaurant #search-res {
+    margin-bottom: 10px;
+    border-style: none;
+    height: 42px;
+    width: 100%;
+    border-radius: 4px;
+  }
+  body .bg_image .banner .banner-group .horizontal-banner .search-restaurant .search-btn {
+    background-color: #e23744;
+    color: white;
+    height: 42px;
+    border-radius: 4px;
+    border-style: none;
+    width: 100%;
+    padding: 5px;
   }
 }
 /*# sourceMappingURL=style.css.map */

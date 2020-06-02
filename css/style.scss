@@ -119,63 +119,71 @@ $link_padding:-42px;
         }
         .bg_image{
             background-image: linear-gradient(
-                rgba(0, 0, 0, 0.3),
-                rgba(0, 0, 0, 0.3)
+                rgba(0, 0, 0, 0.4),
+                rgba(0, 0, 0, 0.4)
               ),url(../images/bg.jpg); 
 
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
             background-size: cover;
-            height: 70vh;                     //newly Added
+            height: 70vh;                     
             padding: 0px;
             width: 100%;
-            //position: relative;
-            text-align: center ;  
-            .banner{
-                //height: 70vh; 
-                position: absolute;             //newly Added
-                top: 30%;
-                left: 30%;        
-                margin: 0px auto;           
-                .banner-group{
+            @include create-flex;
+            align-items: center;
+            justify-content: center; 
+            text-align: center;
+            .banner{           
+                .banner-group{       
+                    width:100%;
                     img{
                         width: 250px;
                         height:100px;
-                        margin: 20px 0px;
+                        margin: 0px 0px 8vh 0px;
                     }
                     .banner-text{
                         color: white;
-                        margin: 20px 0px;
+                        margin: 0px 0px 7vh 0px;
                         font-weight: 300;
                         font-size: x-large;
                     }
                     
-                    .horizontal-banner{                          //new
+                    .horizontal-banner{                         
                         @include create-flex;
+                        justify-content: center;
                         width: 100%;
                         .dropdown{
                             .btn-secondary{
                                 background-color: white;
                                 color: black;
                                 padding: 5px;
-                                width: 150px;
-                                //text-align: left;
-                                //justify-content: end;
+                                width: 15vw;
+                                height: 42px;
+                                //width: 150px;
                             }
+
                             .dropdown-toggle{
                                 
                             }
                         }
 
-                        .search-restaurant{                               //new
+                        .search-restaurant{                               
                             @include create-flex;
                             #search-res{
-                                height: 36px;
-                                width:450px;
+                                height: 42px;
+                                border-style: none;
+                                padding:1px;
+                                width:50vw;                      //new-
+                                border-radius: 4px;
                                 margin: 0px 5px;
                             }
                             .search-btn{
+                                height: 44px;
+                                background-color: #e23744;                  
+                                color: white;
+                                border-radius: 4px;
+                                border-style: none;
                                 width: 100px;
                                 padding: 5px;
                                 margin: 0px 5px;
@@ -184,12 +192,56 @@ $link_padding:-42px;
                     }
                 }
             }
-        }   
+        }
+
+        
+        
+        .collection{
+            .card{
+                width: 25rem;
+                height: 24rem;
+            }
+            .widget{
+                .card-title{
+
+                }
+
+                .search-location{
+                    position: relative;
+                    .search-del{
+                        border-radius: 3px;
+                        border: 1px solid grey;
+                        height: 3.2em;
+                        width: 100%;
+                        padding: 8px;
+                    }
+
+                    .detect-btn{
+                        border-style: none;
+                        border-radius: 1px;
+                        position: absolute;
+                        padding: 6px;
+                        margin:- -0.4em 0em 0em -4.4em;
+                    }
+                }
+                .order-btn{
+                    width: 100%;
+                    margin: 20px 0px;
+                }
+                .hr-style{
+                    
+                }
+            }
+            .order-text{
+                color:rgb(20,174,81);
+                text-align: center;
+                width: 100%;
+            }
+        }
     }
 }
 
-
-/*media query for medium devices*/
+/*media query for medium scale devices*/
 @media screen and (max-width:838px) and (min-width: 421px)
 {
     body{
@@ -281,18 +333,84 @@ $link_padding:-42px;
                 }
             }
         }
+
         .bg_image{
-            background-color: linear-gradient(
-                rgba(0, 0, 0, 0.5),
-                rgba(0, 0, 0, 0.5)
-              );
-            background: url(../images/bg.jpg) no-repeat center center fixed; 
+            background-image: linear-gradient(
+                rgba(0, 0, 0, 0.4),
+                rgba(0, 0, 0, 0.4)
+              ),url(../images/bg.jpg); 
+
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
             background-size: cover;
-            height: 70vh;                    
+            height: 70vh;                     //newly Added
             padding: 0px;
+            width: 100%;
+             @include create-flex;
+            align-items: center;
+            justify-content: center; 
+            text-align: center;  
+            .banner{          
+                .banner-group{                  //new  
+                    img{
+                        width: 100px;
+                        height:50px;
+                        margin: 0px 0px 8vh 0px;
+                    }
+                    .banner-text{
+                        color: white;
+                        margin: 0px 0px 7vh 0px;
+                        font-weight: 300;
+                        font-size: x-large;
+                    }
+                    
+                    .horizontal-banner{                          //new
+                        @include create-flex;
+                        flex-flow: column;
+                        justify-content: center;
+                        width: 100%;
+                        .dropdown{
+                            flex-grow: 1;
+                            width: 100%;
+                            .btn-secondary{
+                                height: 42px;
+                                background-color: white;
+                                color: black;
+                                padding: 5px;
+                                width:100%;                     //new-
+                                margin-bottom: 10px;
+                            }
+
+                            .dropdown-toggle{
+                                
+                            }
+                        }
+
+                        .search-restaurant{                               //new
+                            @include create-flex;
+                            flex-flow: column;
+                            #search-res{
+                                margin-bottom: 10px;
+                                border-style: none;
+                                height: 42px;
+                                width:100%;                      //new-
+                                border-radius: 4px;
+                                //margin: 0px 5px;
+                            }
+                            .search-btn{
+                                background-color: #e23744;                  //new
+                                color: white;
+                                height: 42px;
+                                border-radius: 4px;
+                                border-style: none;
+                                width: 100%;
+                                padding: 5px;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -389,18 +507,85 @@ $link_padding:-42px;
                 }
             }
         }
+
         .bg_image{
-            background-color: linear-gradient(
-                rgba(0, 0, 0, 0.5),
-                rgba(0, 0, 0, 0.5)
-              );
-            background: url(../images/bg.jpg) no-repeat center center fixed; 
+            background-image: linear-gradient(
+                rgba(0, 0, 0, 0.4),
+                rgba(0, 0, 0, 0.4)
+              ),url(../images/bg.jpg); 
+
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
             background-size: cover;
-            height: 70vh;                      //content added
+            height: 70vh;                     //newly Added
             padding: 0px;
+            width: 100%;
+            @include create-flex;
+            align-items: center;
+            justify-content: center; 
+            text-align: center;  
+            .banner{          
+                .banner-group{                  //new  
+                    img{
+                        width: 100px;
+                        height:50px;
+                        margin: 0px 0px 8vh 0px;
+                    }
+                    .banner-text{
+                        color: white;
+                        margin: 0px 0px 7vh 0px;
+                        font-weight: 300;
+                        font-size: x-large;
+                    }
+                    
+                    .horizontal-banner{                          //new
+                        @include create-flex;
+                        flex-flow: column;
+                        justify-content: center;
+                        width: 100%;
+                        .dropdown{
+                            flex-grow: 1;
+                            width: 100%;
+                            .btn-secondary{
+                                height: 42px;
+                                background-color: white;
+                                color: black;
+                                padding: 5px;
+                                width:100%;                     //new-
+                                margin-bottom: 10px;
+                                //margin: 0 ;
+                            }
+
+                            .dropdown-toggle{
+                                
+                            }
+                        }
+
+                        .search-restaurant{                               //new
+                            @include create-flex;
+                            flex-flow: column;
+                            #search-res{
+                                margin-bottom: 10px;
+                                border-style: none;
+                                height: 42px;
+                                width:100%;                      //new-
+                                border-radius: 4px;
+                                //margin: 0px 5px;
+                            }
+                            .search-btn{
+                                background-color: #e23744;                  //new
+                                color: white;
+                                height: 42px;
+                                border-radius: 4px;
+                                border-style: none;
+                                width: 100%;
+                                padding: 5px;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
