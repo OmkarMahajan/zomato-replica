@@ -25,19 +25,19 @@
                     <ul id="zomato-services">
                         <li>
                             <img src="images/order-online.svg" alt="Food Order"/>
-                            <a id="nav_item_1" href="#">
+                            <a class="nav_item_1" href="#">
                             Order Food
                             </a>
                         </li>
                         <li>
                             <img src="images/book-a-table.svg" alt="Food Order"/>
-                            <a id="nav_item_2" href="#">
+                            <a class="nav_item_2" href="#">
                                 Book a Table
                             </a>
                         </li>
                         <li>
                             <img class="nav_item_3_img" src="images/gold.svg" alt="Zomato Gold"/>
-                            <a id="nav_item_3" href="#">
+                            <a class="nav_item_3" href="#">
                                 Zomato Gold
                             </a>
                         </li>
@@ -78,8 +78,8 @@
                     </div>
 
                     <div class="search-restaurant">
-                        <input id="search-rest" type= "text" placeholder= "Search for restaurants or cuisines..."/>
-                        <button id="search-btn">
+                        <input id="search-res" type= "text" placeholder= "Search for restaurants or cuisines..."/>
+                        <button class="search-btn">
                             Search
                         </button>
                     </div>
@@ -89,7 +89,7 @@
             </div>
         </section>
     </div>
-  
+
     <div class="preview">
         <div class="advertise">
             <div class="advertise-content">
@@ -142,26 +142,27 @@
             </div>
         </div>
 
-        <div class="collection ">
-
+        <div class="collection">
             <div class="title-subtitle">
                 <h4 class="order-title"><b>Order Food Online</b></h4>
                 <h5 class="order-subtitle">Best restaurants Delivering to your doorsteps</h5>
             </div>
-            
-                    
-            <div class="widget">
-              <h4 class="card-title">Enter your delivery location</h4>
-              <input id="search-del" type="text" placeholder="Type delivery location here"/>  
-              <button class="detect-btn">
-                  Detect
-              </button>
-              <button type="button" class="btn btn-success order-btn">Order Food Online!</button>
-              <hr class="hr-style"/>
+            <div class="card">
+                <div class="widget">
+                    <div class="card-body">
+                        <h4 class="card-title">Enter your delivery location</h4>
+                        <div class="search-location">
+                            <input class="search-del" type="text" placeholder="Type delivery location here"/>  
+                            <button class="detect-btn">
+                                Detect
+                            </button>
+                        </div>
+                        <button type="button" class="btn btn-success order-btn">Order Food Online!</button>
+                        <hr class="hr-style"/>
+                    </div>
+                </div>
+                <h5 class="order-text">Use code <b>ZOMATO</b> to get up to 50% OFF. T&Cs apply.</h5>
             </div>
-          
-      <h5 class="order-text">Use code <b>ZOMATO</b> to get up to 50% OFF. T&Cs apply.</h5>
-            
         </div>
     </div>
 
@@ -173,7 +174,7 @@
             Discover restaurants by type of meal
         </p>
 
-        <ul class="category-list">
+        <ul id="category-list">
             <li class="list-item">
                 <div class="image-text-wrapper">
                     <img src="./images/delivery.png" alt="delivery"/>
@@ -350,7 +351,6 @@
             </ul>
         </div>
     </section>
-    
     <section class="iphone-card">
         <div class="card mb-3">
             <div class="row no-gutters">
@@ -547,7 +547,7 @@
     
               </div>
               <!-- Grid row -->
-              
+    
             </div>
             <!-- Footer Links -->
             
@@ -751,9 +751,3 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </html>
-
-<!-- ToDo : change serach-res in css
-            search-del
-            search-btn
-            category-list
-            -->
